@@ -1,0 +1,7 @@
+const assert = require('assert')
+const { calculate, total } = require('./index')
+assert.deepEqual(calculate(14), 2)
+assert.deepEqual(calculate(1969), 966)
+assert.deepEqual(calculate(100756), 50346)
+console.log(total())
+// assert.deepEqual(total(), 3313655)

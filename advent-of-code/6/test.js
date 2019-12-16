@@ -3,11 +3,15 @@ const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
 
-const map1 = 'COM)B,B)C,C)D,D)E,E)F,B)G,G)H,D)I,E)J,J)K,K)L'.split(',')
-assert.deepEqual(getOrbits(map1), 42)
+// const map1 = 'COM)B,B)C,C)D,D)E,E)F,B)G,G)H,D)I,E)J,J)K,K)L'.split(',')
+// // assert.deepEqual(getOrbits(map1), 42)
+
+// const map2 = 'COM)B,B)C,C)D,D)E,E)F,B)G,G)H,D)I,E)J,J)K,K)L,K)YOU,I)SAN'.split(',')
+// getOrbits(map2)
+// assert.deepEqual(getOrbits(map2), 42)
 
 fs.readFile(path.join(__dirname, 'input.txt'), 'utf8', (err, data) => {
   if (err) throw(err)
   const map2 = data.split('\n')
-  assert.deepEqual(getOrbits(map2), 314247)
+  assert.deepEqual(getOrbits(map2).total, 314247)
 })
